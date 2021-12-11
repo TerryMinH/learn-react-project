@@ -1,0 +1,33 @@
+<!--
+ * @Author: TerryMin
+ * @Date: 2021-11-22 14:10:58
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2021-12-06 14:18:19
+ * @Description: file not
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  const items = ['one', 'two', 'three'];
+  //创建迭代器
+  const ite = items(Symbol.Iterator)();
+  //进行获取
+  console.log(ite.next())   //{value:'one',done:false}
+  console.log(ite.next())   //{value:'two',done:false}
+  console.log(ite.next())   //{value:'three',done:false}
+  console.log(ite.next())   //{value:undefined,done:true}
+
+</script>
+
+</html>
