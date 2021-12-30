@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2020-11-04 16:02:38
  * @LastEditors: TerryMin
- * @LastEditTime: 2021-12-02 10:55:29
+ * @LastEditTime: 2021-12-29 17:34:56
  * @Description: file not
  */
 import React from 'react'
@@ -11,10 +11,12 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import App from './containers/App'
+import TestLogic from './containers/TestLogic'
 
 render(
   <Provider store={store}>
-    <App />
+    {/* <App /> */}
+    <TestLogic />
   </Provider>,
   document.getElementById('root')
 )

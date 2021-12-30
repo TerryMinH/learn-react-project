@@ -34,19 +34,26 @@ class CustomTextInput extends Component {
 }
 
 export default class Test extends Component {
+  constructor(props){
+    super(props);
+    this.divRef=createRef();
+  }
+
   componentDidMount () {
     console.log(this.textInput);
     //父组件自动调用子组件CustomTextInput实例的focus方法
-    this.textInput.focus();
+    // this.textInput.focus();
   }
 
   handleClick = () => {
     this.textInput.handleChild();
+    this.divRef.current=90;
   }
 
   render () {
     return (
       <div>
+         divRef值： {this.divRef.current}
         <CustomTextInput
           ref={(input) => { this.textInput = input; }} />
         <button onClick={this.handleClick}>父组件按钮</button>
