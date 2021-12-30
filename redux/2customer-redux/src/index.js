@@ -2,8 +2,8 @@
  * @Author: TerryMin
  * @Date: 2020-01-30 11:20:58
  * @LastEditors: TerryMin
- * @LastEditTime: 2021-11-08 11:40:27
- * @Description: 项目来自react.js小书  http://huziketang.mangojuice.top/books/react/
+ * @LastEditTime: 2021-12-30 13:52:08
+ * @Description: 项目来自react.js小书  http://huziketang.mangojuice.top/books/react/  采用发布订阅设计模式
  */
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
