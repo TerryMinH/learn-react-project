@@ -6,14 +6,4 @@
  * @Description: file not
  */
 
-// 所有的action的类型（type）都写在这里，方便识别和查找，以免重复
-
-// 增加值
-export const INCREMENT = 'increment'
-
-// 减少值
-export const DECREMENT = 'decrement'
-
-
-
-
+export const CHANGENUMBER = 'changeNumber'

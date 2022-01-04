@@ -2,6 +2,8 @@ export const REQUEST_POSTS = 'REQUEST_POSTS'
 export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const SELECT_SUBREDDIT = 'SELECT_SUBREDDIT'
 export const INVALIDATE_SUBREDDIT = 'INVALIDATE_SUBREDDIT'
+export const CHANGEDECREASE = 'changeDecrease';
+export const CHANGEINCREASE = 'changeIncrease';
 
 export const selectSubreddit = subreddit => ({
   type: SELECT_SUBREDDIT,
@@ -48,3 +50,6 @@ export const fetchPostsIfNeeded = subreddit => (dispatch, getState) => {
     return dispatch(fetchPosts(subreddit))
   }
 }
+export const changeNumber = (type) => ({
+  type:type
+})
