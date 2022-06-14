@@ -2,72 +2,51 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:28:27
  * @LastEditors: TerryMin
- * @LastEditTime: 2021-12-27 10:57:23
+ * @LastEditTime: 2022-04-24 15:42:17
  * @Description: file not
 -->
+<!DOCTYPE html>
 <html>
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>JS:DES-DEMO测试</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="tripledes.js"></script>
-  <script src="mode-ecb.js"></script>
-  <script>
-    //DES 加密
-    function encryptByDES(message, key) {
-      var keyHex = CryptoJS.enc.Utf8.parse(key);
-      var encrypted = CryptoJS.DES.encrypt(message, keyHex, {
-        mode: CryptoJS.mode.ECB,
-        padding: CryptoJS.pad.Pkcs7
-      });
-      return encrypted.toString();
-    }
-    //DES 解密
-    function decryptByDES(ciphertext, key) {
-      var keyHex = CryptoJS.enc.Utf8.parse(key);
-      // direct decrypt ciphertext
-      var decrypted = CryptoJS.DES.decrypt({
-        ciphertext: CryptoJS.enc.Base64.parse(ciphertext)
-      }, keyHex, {
-        mode: CryptoJS.mode.ECB,
-        padding: CryptoJS.pad.Pkcs7
-      });
-      return decrypted.toString(CryptoJS.enc.Utf8);
-    }
-  </script>
-  <script>
-    //加密
-    function encryptStr() {
-      var strKey = $.trim($('#key').val());
-      var strMsg = $.trim($('#text1').val());
-      $('#text2').val(encryptByDES(strMsg, strKey));
-    }
-    //解密
-    function decryptStr() {
-      var strKey = $.trim($('#key').val());
-      var ciphertext = $.trim($('#text2').val());
-      $('#text3').val(decryptByDES(ciphertext, strKey));
-    }
-  </script>
+    <meta charset="utf-8">
+    <title>清除浮动</title>
+    <style type="text/css">
+        div {
+            height: 300px;
+        }
+        
+        .parent {
+            display: flex;
+        }
+        
+        .left {
+            flex: 0 0 100px;
+            background: red;
+        }
+        
+        .center {
+            flex: 0 0 100px;
+            background: #666;
+        }
+        
+        .right {
+            flex: 1 1 auto;
+            background: #abcdef;
+        }
+    </style>
+    <script src="./index.js"></script>
 </head>
 
 <body>
-  <h1>JS׃DES-demo</h1>
-  <label>key</label>
-  <input type="text" value='12345678' id="key" />
-  <div>
-    <textarea id="text1" placeholder="原文" style="width:300px;"></textarea>
-  </div>
-  <div>
-    <input type="button" value="加密" onclick="encryptStr();" />
-    <textarea id="text2" placeholder="加密结果" style="width:300px;"></textarea>
-  </div>
-  <div>
-    <input type="button" value="解密" onclick="decryptStr();" />
-    <textarea id="text3" placeholder="解密结果" style="width:300px;"></textarea>
-  </div>
-
+    <div class="parent">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
 </body>
+
+<script>
+</script>
 
 </html>
